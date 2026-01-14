@@ -1,20 +1,34 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 const AdminDashboard = () => {
     return (
         <div className="space-y-6">
             <h1 className="text-3xl font-bold">Dashboard</h1>
             <div className="grid gap-6 md:grid-cols-3">
-                <div className="bg-white p-6 rounded-xl shadow-sm border">
-                    <h3 className="text-sm font-medium text-slate-500">Total Leads</h3>
-                    <p className="text-3xl font-bold mt-2">12</p>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-sm border">
-                    <h3 className="text-sm font-medium text-slate-500">Published Pages</h3>
-                    <p className="text-3xl font-bold mt-2">8</p>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-sm border">
-                    <h3 className="text-sm font-medium text-slate-500">Products</h3>
-                    <p className="text-3xl font-bold mt-2">24</p>
-                </div>
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                        <CardTitle className="text-sm font-medium">Total Leads</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="text-2xl font-bold">12</div>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                        <CardTitle className="text-sm font-medium">Published Pages</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="text-2xl font-bold">8</div>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                        <CardTitle className="text-sm font-medium">Products</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="text-2xl font-bold">24</div>
+                    </CardContent>
+                </Card>
             </div>
         </div>
     );
