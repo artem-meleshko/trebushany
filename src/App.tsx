@@ -5,6 +5,7 @@ import PublicLayout from "./components/layout/PublicLayout";
 import AdminLayout from "./components/layout/AdminLayout";
 import Index from "./pages/Index";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminPageBuilder from "./pages/admin/AdminPageBuilder";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +26,7 @@ const App = () => (
         {/* Admin Routes */}
         <Route path="/admin-portal" element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
-          <Route path="page-builder" element={<div>Page Builder Placeholder</div>} />
+          <Route path="page-builder" element={<AdminPageBuilder />} />
         </Route>
 
         {/* Catch-all */}
