@@ -5,34 +5,34 @@ import { Type, Image, Square, LayoutTemplate } from "lucide-react";
 const WIDGETS: Widget[] = [
     {
         type: "hero",
-        label: "Hero Section",
+        label: "Головний Екран",
         icon: <LayoutTemplate className="w-5 h-5" />,
         defaultContent: {
-            title: "Hero Title",
-            subtitle: "Hero Subtitle",
-            cta: "Click Me"
+            title: "Заголовок",
+            subtitle: "Підзаголовок секції",
+            cta: "Детальніше"
         }
     },
     {
         type: "text",
-        label: "Text Block",
+        label: "Текстовий Блок",
         icon: <Type className="w-5 h-5" />,
         defaultContent: {
-            text: "Lorem ipsum dolor sit amet..."
+            text: "Введіть ваш текст тут..."
         }
     },
     {
         type: "image",
-        label: "Image",
+        label: "Зображення",
         icon: <Image className="w-5 h-5" />,
         defaultContent: {
             src: "https://placehold.co/600x400",
-            alt: "Placeholder"
+            alt: "Зображення"
         }
     },
     {
         type: "container",
-        label: "Container",
+        label: "Контейнер",
         icon: <Square className="w-5 h-5" />,
         defaultContent: {
             padding: "p-4"
@@ -68,8 +68,8 @@ export const Sidebar = () => {
     return (
         <aside className="w-64 bg-sidebar border-r flex flex-col h-full">
             <div className="p-4 border-b">
-                <h2 className="font-semibold text-slate-900">Widgets</h2>
-                <p className="text-xs text-slate-500">Drag items to canvas</p>
+                <h2 className="font-semibold text-slate-900">Віджети</h2>
+                <p className="text-xs text-slate-500">Перетягніть елементи</p>
             </div>
             <div className="p-4 space-y-3 overflow-y-auto flex-1">
                 {WIDGETS.map((widget) => (

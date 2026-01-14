@@ -25,19 +25,19 @@ const AdminLayout = () => {
             {/* Admin Sidebar */}
             <aside className="w-64 bg-white border-r flex flex-col hidden md:flex">
                 <div className="p-6 border-b">
-                    <h2 className="text-lg font-bold">Admin Portal</h2>
+                    <h2 className="text-lg font-bold">Адмін Панель</h2>
                 </div>
 
                 <nav className="flex-1 p-4 space-y-2">
-                    <div className="p-2 bg-accent/10 text-accent rounded font-medium cursor-pointer" onClick={() => navigate("/admin-portal")}>Dashboard</div>
-                    <div className="p-2 hover:bg-slate-100 rounded cursor-pointer" onClick={() => navigate("/admin-portal/page-builder")}>Page Builder</div>
-                    <div className="p-2 hover:bg-slate-100 rounded cursor-not-allowed opacity-50">Settings</div>
+                    <div className="p-2 bg-accent/10 text-accent rounded font-medium cursor-pointer" onClick={() => navigate("/admin-portal")}>Дашборд</div>
+                    <div className="p-2 hover:bg-slate-100 rounded cursor-pointer" onClick={() => navigate("/admin-portal/page-builder")}>Конструктор Сторінок</div>
+                    <div className="p-2 hover:bg-slate-100 rounded cursor-not-allowed opacity-50">Налаштування</div>
                 </nav>
 
                 <div className="p-4 border-t">
                     <Button variant="ghost" className="w-full justify-start gap-2 text-red-500 hover:text-red-600 hover:bg-red-50" onClick={handleSignOut}>
                         <LogOut className="w-4 h-4" />
-                        Sign Out
+                        Вийти
                     </Button>
                 </div>
             </aside>

@@ -13,7 +13,7 @@ export const Inspector = ({ selectedId, element, onUpdate }: InspectorProps) => 
     if (!selectedId || !element) {
         return (
             <aside className="w-80 bg-white border-l p-6 flex items-center justify-center text-slate-400 text-sm text-center">
-                Select an element on canvas to edit properties
+                Виберіть елемент для редагування
             </aside>
         );
     }
@@ -30,7 +30,7 @@ export const Inspector = ({ selectedId, element, onUpdate }: InspectorProps) => 
     return (
         <aside className="w-80 bg-white border-l flex flex-col h-full shadow-lg z-20">
             <div className="p-4 border-b bg-slate-50">
-                <h3 className="font-semibold text-slate-900 capitalize">{element.type} Properties</h3>
+                <h3 className="font-semibold text-slate-900 capitalize">Налаштування</h3>
                 <p className="text-xs text-slate-500">ID: {element.id.slice(0, 8)}</p>
             </div>
 
@@ -40,21 +40,21 @@ export const Inspector = ({ selectedId, element, onUpdate }: InspectorProps) => 
                 {element.type === 'hero' && (
                     <>
                         <div className="space-y-2">
-                            <Label>Title</Label>
+                            <Label>Заголовок</Label>
                             <Input
                                 value={element.content.title}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleContentChange('title', e.target.value)}
                             />
                         </div>
                         <div className="space-y-2">
-                            <Label>Subtitle</Label>
+                            <Label>Підзаголовок</Label>
                             <Textarea
                                 value={element.content.subtitle}
                                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleContentChange('subtitle', e.target.value)}
                             />
                         </div>
                         <div className="space-y-2">
-                            <Label>CTA Text</Label>
+                            <Label>Текст Кнопки (CTA)</Label>
                             <Input
                                 value={element.content.cta}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleContentChange('cta', e.target.value)}
@@ -65,7 +65,7 @@ export const Inspector = ({ selectedId, element, onUpdate }: InspectorProps) => 
 
                 {element.type === 'text' && (
                     <div className="space-y-2">
-                        <Label>Content</Label>
+                        <Label>Текст</Label>
                         <Textarea
                             className="min-h-[200px]"
                             value={element.content.text}
@@ -76,7 +76,7 @@ export const Inspector = ({ selectedId, element, onUpdate }: InspectorProps) => 
 
                 {element.type === 'image' && (
                     <div className="space-y-2">
-                        <Label>Image URL</Label>
+                        <Label>Посилання на зображення (URL)</Label>
                         <Input
                             value={element.content.src}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleContentChange('src', e.target.value)}
