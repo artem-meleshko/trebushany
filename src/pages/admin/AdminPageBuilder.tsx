@@ -11,6 +11,7 @@ export type PageElement = {
     type: Widget['type'];
     content: any;
     styles?: any;
+    children?: PageElement[];
 };
 
 const AdminPageBuilder = () => {

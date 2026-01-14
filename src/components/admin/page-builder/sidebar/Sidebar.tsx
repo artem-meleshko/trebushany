@@ -4,21 +4,23 @@ import { Type, Image, Square, LayoutTemplate } from "lucide-react";
 
 const WIDGETS: Widget[] = [
     {
-        type: "hero",
-        label: "Головний Екран",
+        type: "section",
+        label: "Секція (Рядок)",
         icon: <LayoutTemplate className="w-5 h-5" />,
         defaultContent: {
-            title: "Заголовок",
-            subtitle: "Підзаголовок секції",
-            cta: "Детальніше"
+            columns: 1,
+        },
+        defaultStyles: {
+            padding: "py-12 px-4",
+            background: "bg-white"
         }
     },
     {
         type: "text",
-        label: "Текстовий Блок",
+        label: "Текст",
         icon: <Type className="w-5 h-5" />,
         defaultContent: {
-            text: "Введіть ваш текст тут..."
+            text: "<h2>Заголовок</h2><p>Текст секції...</p>"
         }
     },
     {
@@ -31,11 +33,21 @@ const WIDGETS: Widget[] = [
         }
     },
     {
-        type: "container",
-        label: "Контейнер",
+        type: "video",
+        label: "Відео",
         icon: <Square className="w-5 h-5" />,
         defaultContent: {
-            padding: "p-4"
+            url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+    },
+    {
+        type: "card",
+        label: "Картка",
+        icon: <Square className="w-5 h-5" />,
+        defaultContent: {
+            title: "Назва картки",
+            description: "Опис картки...",
+            image: "https://placehold.co/300x200"
         }
     }
 ];
